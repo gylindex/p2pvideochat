@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta itemprop="image" content="./images/webrtc-icon-192x192.png">
+<!-- title 字段是网页的页面标签 -->
+    <title>WebRTC AVC</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" sizes="192x192" href="./images/webrtc-icon-192x192.png">
+    
+</head>
+
+<body>
+<!-- h1相当于是一级标题，是页面正文里面显示 -->
+    <h1 style="margin-left:800px;">00版视频通话</h1>
+<!-- div标签：划分块 ，块的名字叫buttons，随便取的-->
+    <div id="buttons" style="margin-left: 780px; margin-top: 50px;">
+        <input id="gyl-roomId" type="text"   placeholder="房间号" maxlength='40' style="width: 69px;"/>
+        <!-- <input id="user-name" type="text"   placeholder="昵称" maxlength='10' style="width: 150px;"/> -->
+        <button id="joinBtn" type="button">加入</button>
+        <button id="leaveBtn" type="button">离开</button>
+        <select id="show" name="show" autofocus>
+            <option value="1" >音频</option>
+            <option value="2" >视频</option>
+            <option value="3" selected>音视频</option>
+        </select>
+    </div>
+
+    <!-- 划分一个播放视频的块，静音播放本地的，播放远端的 注意：视频控件的id要匹配，这里的视频控件只是一个空壳，js文件里要向这个控件里填-->
+    <div id="videos" style="margin-left: 280px;">
+        <video id="localVideo" autoplay muted playsinline></video>
+        <video id="remoteVideo1" autoplay playsinline></video>
+        <video id="remoteVideo2" autoplay playsinline></video>
+    </div>
+<!-- 引用js的文件 -->
+    <script src="js/adapter-latest.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
